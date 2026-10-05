@@ -1,0 +1,109 @@
+.card {
+  display: grid;
+  overflow: hidden;
+}
+
+.figure {
+  margin: 0;
+  padding: 1.25rem 1.25rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(120% 90% at 50% 0%, rgba(59, 130, 246, 0.16), transparent 70%), rgba(255, 255, 255, 0.02);
+}
+
+.figure figcaption {
+  margin-top: 0.4rem;
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+  text-align: center;
+}
+
+.body {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding: clamp(1.25rem, 1rem + 1.5vw, 2rem);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+  font-weight: 600;
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+.compact .title {
+  font-size: var(--fs-h3);
+}
+
+.summary {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.story {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.story dt {
+  margin-bottom: 0.2rem;
+  color: var(--accent-bright);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+}
+
+.story dd {
+  margin: 0;
+  max-width: 58ch;
+  color: var(--text-muted);
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.services li {
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-weight: 560;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent-bright);
+  font-size: var(--fs-small);
+  font-weight: 650;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  .card:not(.compact) {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .card:not(.compact) .figure {
+    display: grid;
+    align-content: center;
+    padding: 2rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
+  }
+}

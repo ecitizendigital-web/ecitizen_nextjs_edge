@@ -1,0 +1,60 @@
+.layout {
+  display: grid;
+  gap: 2.5rem;
+  padding-block: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+}
+
+.aside {
+  align-self: start;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.asideTitle {
+  margin-bottom: 0.8rem;
+  color: var(--text-faint);
+  font-family: var(--font-body);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.aside ul {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.aside a {
+  color: var(--accent-bright);
+  font-size: var(--fs-small);
+  font-weight: 650;
+}
+
+.aside a:hover {
+  color: #fff;
+}
+
+.related {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 860px) {
+  .related {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 4rem;
+  }
+
+  .aside {
+    position: sticky;
+    top: calc(var(--header-h) + 32px);
+  }
+}

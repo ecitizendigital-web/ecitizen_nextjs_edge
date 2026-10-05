@@ -1,0 +1,77 @@
+.jump {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.jumpLabel {
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+}
+
+.jump ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.jump a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--glass);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  transition: border-color var(--dur-base) var(--ease-out);
+}
+
+.jump a:hover {
+  border-color: var(--border-accent);
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.combine {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  padding: clamp(1.5rem, 1rem + 3vw, 3rem);
+}
+
+.combineLabel {
+  color: var(--accent-bright);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+}
+
+.combineTitle {
+  max-width: 24ch;
+  font-size: var(--fs-h2);
+}
+
+.combineBody {
+  max-width: 56ch;
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+}
+
+.path {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

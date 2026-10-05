@@ -1,0 +1,16 @@
+.orb {
+  display: block;
+  width: var(--orb-size);
+  height: var(--orb-size);
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 18px var(--signal);
+  animation: drift 6s ease-in-out infinite;
+  animation-delay: var(--orb-delay);
+}
+
+@keyframes drift {
+  50% {
+    transform: translateY(-7px);
+  }
+}

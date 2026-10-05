@@ -1,0 +1,44 @@
+.layout {
+  display: grid;
+  gap: 2rem 4rem;
+  align-items: start;
+}
+
+.intro {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+.body {
+  max-width: 52ch;
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+}
+
+.points {
+  display: grid;
+}
+
+.points li {
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 560;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.points li:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  }
+}

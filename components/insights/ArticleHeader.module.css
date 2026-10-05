@@ -1,0 +1,80 @@
+.header {
+  padding: clamp(2.5rem, 1.5rem + 4vw, 5rem) 0 clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(70% 120% at 85% -20%, rgba(59, 130, 246, 0.16), transparent 70%);
+}
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}
+
+.crumbs li + li::before {
+  content: "/";
+  margin-right: 0.5rem;
+  opacity: 0.6;
+}
+
+.crumbs a:hover {
+  color: var(--text);
+}
+
+.crumbs [aria-current="page"] {
+  color: var(--text-muted);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.title {
+  font-size: clamp(1.9rem, 1.3rem + 2.6vw, 3.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.dek {
+  margin-top: 1.25rem;
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1.25rem;
+  margin-top: 1.5rem;
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}
+
+.read {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.summary {
+  margin-top: 1.75rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(142, 186, 255, 0.28);
+  border-radius: var(--radius-md);
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.summaryLabel {
+  margin-bottom: 0.3rem;
+  color: var(--accent-bright);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+}

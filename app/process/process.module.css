@@ -1,0 +1,5 @@
+.loop {
+  max-width: 62ch;
+  margin-top: 1.75rem;
+  color: var(--text-muted);
+}

@@ -1,0 +1,24 @@
+.wrap {
+  min-height: 60vh;
+  display: grid;
+  align-items: center;
+}
+
+.title {
+  margin-top: 1.25rem;
+  font-size: var(--fs-h1);
+}
+
+.lead {
+  max-width: 52ch;
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}

@@ -1,0 +1,52 @@
+.note {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1.25rem, 1rem + 2vw, 2.5rem);
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.copy {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 62ch;
+}
+
+.label {
+  color: var(--accent-bright);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+}
+
+.title {
+  font-size: clamp(1.4rem, 1.15rem + 1vw, 2rem);
+  line-height: 1.2;
+}
+
+.text {
+  color: var(--text-muted);
+}
+
+.sign {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+@media (min-width: 760px) {
+  .note {
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .photo {
+    width: 150px;
+    height: 150px;
+  }
+}

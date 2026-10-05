@@ -1,0 +1,56 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  padding: clamp(3rem, 2rem + 5vw, 6rem) 0 clamp(1.5rem, 1rem + 2vw, 3rem);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -240px;
+  right: -140px;
+  width: 640px;
+  height: 640px;
+  max-width: 90vw;
+  background: var(--glow);
+  pointer-events: none;
+}
+
+.mark {
+  position: absolute;
+  z-index: -1;
+  right: 4%;
+  top: 14%;
+  width: min(320px, 40vw);
+  height: auto;
+  opacity: 0.09;
+}
+
+.inner {
+  display: grid;
+  justify-items: start;
+  gap: 1.25rem;
+}
+
+.title {
+  font-size: var(--fs-h1);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+}
+
+.line {
+  display: block;
+}
+
+.lead {
+  max-width: 56ch;
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+}
+
+.extra {
+  width: 100%;
+  margin-top: 0.5rem;
+}

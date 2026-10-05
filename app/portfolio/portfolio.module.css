@@ -1,0 +1,15 @@
+.list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.evidence {
+  max-width: 70ch;
+  margin-top: 1.75rem;
+  color: var(--text-faint);
+  font-size: var(--fs-small);
+}
+
+.evidence strong {
+  color: var(--text-muted);
+}

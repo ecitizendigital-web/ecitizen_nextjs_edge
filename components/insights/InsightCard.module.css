@@ -1,0 +1,56 @@
+.card {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+}
+
+.link:focus-visible {
+  outline: none;
+}
+
+.link:focus-visible::after {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+.excerpt {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1.1rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}
+
+.read {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}

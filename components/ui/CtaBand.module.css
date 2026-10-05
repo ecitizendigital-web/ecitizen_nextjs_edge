@@ -1,0 +1,46 @@
+.band {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 1rem + 3vw, 3.25rem);
+  overflow: hidden;
+}
+
+.band::before {
+  content: "";
+  position: absolute;
+  inset: auto -120px -200px auto;
+  width: 420px;
+  height: 420px;
+  background: var(--glow);
+  pointer-events: none;
+}
+
+.copy {
+  position: relative;
+  display: grid;
+  gap: 0.9rem;
+  max-width: 44rem;
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+.body {
+  max-width: 56ch;
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.note {
+  position: relative;
+  color: var(--text-faint);
+  font-size: var(--fs-small);
+}

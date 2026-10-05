@@ -1,0 +1,30 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.28rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--glass);
+  color: var(--text-muted);
+  font-size: var(--fs-meta);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.neutral {
+  /* default look comes from .badge */
+  color: var(--text-muted);
+}
+
+.accent {
+  border-color: rgba(142, 186, 255, 0.35);
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--accent-bright);
+}
+
+.solid {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: var(--gradient-accent);
+  color: #fff;
+}

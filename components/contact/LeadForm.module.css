@@ -1,0 +1,83 @@
+.form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.required {
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}
+
+.row {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.submit {
+  display: grid;
+  gap: 0.8rem;
+  justify-items: start;
+}
+
+.note {
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}
+
+.note a {
+  color: var(--accent-bright);
+  text-decoration: underline;
+}
+
+.success,
+.failure {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.4rem;
+  border-radius: var(--radius-md);
+}
+
+.success {
+  border: 1px solid rgba(110, 231, 168, 0.45);
+  background: rgba(110, 231, 168, 0.08);
+}
+
+.failure {
+  border: 1px solid var(--danger-border);
+  background: var(--danger-bg);
+}
+
+.success:focus,
+.failure:focus,
+.resultTitle:focus {
+  outline: none;
+}
+
+.resultTitle {
+  font-size: var(--fs-h3);
+}
+
+.success p,
+.failure p {
+  color: var(--text-muted);
+}
+
+.resultActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+@media (min-width: 640px) {
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

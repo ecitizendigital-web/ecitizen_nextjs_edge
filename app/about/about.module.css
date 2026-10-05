@@ -1,0 +1,52 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  gap: 0.8rem;
+  align-content: start;
+  height: 100%;
+  padding: clamp(1.4rem, 1rem + 1.5vw, 2rem);
+}
+
+.label {
+  color: var(--accent-bright);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+}
+
+.title {
+  font-size: var(--fs-h3);
+}
+
+.body {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.promise {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: clamp(1.5rem, 1rem + 3vw, 3rem);
+}
+
+.promiseText {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.promiseText span {
+  display: block;
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

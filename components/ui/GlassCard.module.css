@@ -1,0 +1,25 @@
+.card {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.025)), var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.interactive {
+  transition: border-color var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out);
+}
+
+.interactive:hover {
+  border-color: var(--border-accent);
+}
+
+.highlighted {
+  border-color: rgba(59, 130, 246, 0.7);
+  background:
+    linear-gradient(150deg, rgba(59, 130, 246, 0.2), rgba(255, 255, 255, 0.03)),
+    var(--surface);
+  box-shadow:
+    0 30px 90px -40px rgba(37, 99, 235, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}

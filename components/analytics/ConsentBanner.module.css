@@ -1,0 +1,55 @@
+.banner {
+  position: fixed;
+  left: 50%;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: var(--z-banner);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem 1.5rem;
+  width: min(760px, 100% - 24px);
+  padding: 0.95rem 1.1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: rgba(10, 15, 24, 0.97);
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.9);
+  transform: translateX(-50%);
+  animation: banner-in var(--dur-base) var(--ease-out);
+}
+
+.copy {
+  display: grid;
+  gap: 0.2rem;
+  flex: 1 1 320px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+
+.text {
+  flex: 1 1 260px;
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+.text a {
+  color: var(--accent-bright);
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@keyframes banner-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+}

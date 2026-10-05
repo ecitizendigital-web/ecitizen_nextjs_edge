@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.reveal {
+  height: 100%;
+}
+
+.reveal > * {
+  height: 100%;
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

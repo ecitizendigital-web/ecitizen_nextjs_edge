@@ -1,0 +1,99 @@
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}
+
+.scroll {
+  /* Positioned so the visually hidden "Included" labels are clipped with the table instead of widening the page. */
+  position: relative;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: var(--fs-small);
+}
+
+.table th,
+.table td {
+  padding: 0.8rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--surface-2);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+
+.table th[scope="row"],
+.table thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 150px;
+  background: var(--surface);
+  text-align: left;
+  font-weight: 600;
+}
+
+.table thead th:first-child {
+  z-index: 2;
+  background: var(--surface-2);
+}
+
+.group {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--accent-bright);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+  text-align: left;
+}
+
+.table th.group {
+  position: static;
+}
+
+.highlight {
+  background: rgba(59, 130, 246, 0.09);
+}
+
+.table thead th.highlight {
+  background: rgba(37, 99, 235, 0.35);
+}
+
+.yes {
+  display: inline-block;
+  color: var(--success);
+}
+
+.no {
+  display: inline-block;
+  color: var(--text-faint);
+  opacity: 0.6;
+}
+
+@media (min-width: 900px) {
+  .hint {
+    display: none;
+  }
+
+  .table {
+    min-width: 0;
+  }
+}

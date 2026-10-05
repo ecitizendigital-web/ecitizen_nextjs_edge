@@ -1,0 +1,134 @@
+.scene {
+  position: relative;
+  height: clamp(280px, 40vw, 500px);
+  perspective: 1100px;
+  --rx: calc(var(--py, 0) * -7deg);
+  --ry: calc(var(--px, 0) * 9deg);
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(9deg + var(--rx))) rotateY(calc(-14deg + var(--ry)));
+}
+
+.floor {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: -4%;
+  height: 52%;
+  background:
+    linear-gradient(rgba(142, 186, 255, 0.22) 1px, transparent 1px) 0 0 / 100% 38px,
+    linear-gradient(90deg, rgba(142, 186, 255, 0.22) 1px, transparent 1px) 0 0 / 46px 100%;
+  -webkit-mask-image: radial-gradient(closest-side, #000, transparent);
+  mask-image: radial-gradient(closest-side, #000, transparent);
+  transform: translateZ(-110px) rotateX(78deg);
+}
+
+.halo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 74%;
+  aspect-ratio: 1;
+  margin: -37% 0 0 -37%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(59, 130, 246, 0.5), transparent);
+  transform: translateZ(10px);
+  animation: breathe 6s ease-in-out infinite;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(142, 186, 255, 0.36);
+  translate: 0 0 30px;
+  animation: spin 26s linear infinite;
+}
+
+.ringOuter {
+  inset: 6% 8%;
+}
+
+.ringInner {
+  inset: 22% 26%;
+  border-color: rgba(53, 214, 255, 0.34);
+  animation-duration: 18s;
+  animation-direction: reverse;
+}
+
+.nodeTop {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+}
+
+.nodeBottom {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 46%;
+  translate: -50% -50% 70px;
+  animation: bob 7s ease-in-out infinite;
+}
+
+.mark {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 26px rgba(59, 130, 246, 0.6));
+}
+
+.chip {
+  position: absolute;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  background: rgba(13, 20, 34, 0.88);
+  color: #e4ecfa;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  line-height: 1;
+  translate: 0 0 var(--z);
+  animation: chip-float 7s ease-in-out infinite;
+  animation-delay: var(--d);
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes bob {
+  50% {
+    translate: -50% calc(-50% - 8px) 70px;
+  }
+}
+
+@keyframes chip-float {
+  50% {
+    translate: 0 -8px var(--z);
+  }
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 640px) {
+  .chip:nth-of-type(n + 4) {
+    display: none;
+  }
+}

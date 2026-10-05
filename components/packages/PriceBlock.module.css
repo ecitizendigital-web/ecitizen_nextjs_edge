@@ -1,0 +1,44 @@
+.price {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.was,
+.save {
+  min-height: 1.4em;
+  font-size: var(--fs-meta);
+}
+
+.was {
+  color: var(--text-faint);
+}
+
+.save {
+  color: var(--success);
+  font-weight: 650;
+}
+
+.was[data-visible="false"],
+.save[data-visible="false"] {
+  visibility: hidden;
+}
+
+.now {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.5rem;
+}
+
+.amount {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 1.5rem + 1.2vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.unit {
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}

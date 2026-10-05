@@ -1,0 +1,96 @@
+.card {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1.25rem, 1rem + 1.5vw, 2.25rem);
+}
+
+.copy {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.title {
+  font-size: var(--fs-h3);
+}
+
+.lead {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.options {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+  font-weight: 560;
+  cursor: pointer;
+  transition: border-color var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out);
+}
+
+.option:hover {
+  border-color: var(--border-strong);
+}
+
+.option:has(input:checked) {
+  border-color: rgba(59, 130, 246, 0.7);
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.option:has(input:focus-visible) {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+
+.option input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--accent-solid);
+}
+
+.result {
+  display: grid;
+  gap: 0.7rem;
+  justify-items: start;
+  align-content: start;
+  padding: 1.25rem;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+}
+
+.suggest {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 560;
+}
+
+.text {
+  max-width: 52ch;
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.price {
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}
+
+@media (min-width: 900px) {
+  .card {
+    grid-template-columns: 0.8fr 1.1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+}

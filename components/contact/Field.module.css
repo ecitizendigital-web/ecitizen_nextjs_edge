@@ -1,0 +1,75 @@
+.field {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+
+.label {
+  font-size: var(--fs-small);
+  font-weight: 650;
+}
+
+.optional {
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+.control {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 0.95rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--text);
+  font-size: 1rem;
+  transition: border-color var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out);
+}
+
+.control::placeholder {
+  color: var(--text-faint);
+}
+
+.control:hover {
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+.control:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+  border-color: var(--accent-bright);
+}
+
+.control[aria-invalid="true"] {
+  border-color: var(--danger-border);
+  background: var(--danger-bg);
+}
+
+.select {
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a3afc2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 0.9rem center;
+  background-repeat: no-repeat;
+}
+
+.select option {
+  background: #0d1320;
+  color: #eef3fb;
+}
+
+.area {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.hint {
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}
+
+.error {
+  color: var(--danger);
+  font-size: var(--fs-small);
+  font-weight: 560;
+}

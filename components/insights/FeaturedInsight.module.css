@@ -1,0 +1,61 @@
+.card {
+  display: grid;
+  gap: 1.1rem;
+  padding: clamp(1.5rem, 1rem + 2.5vw, 3rem);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.title {
+  max-width: 24ch;
+  font-size: var(--fs-h2);
+  line-height: 1.1;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+}
+
+.link:focus-visible {
+  outline: none;
+}
+
+.link:focus-visible::after {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+.excerpt {
+  max-width: 62ch;
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  color: var(--text-faint);
+  font-size: var(--fs-meta);
+}
+
+.read,
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cta {
+  color: var(--accent-bright);
+  font-size: var(--fs-small);
+  font-weight: 650;
+}

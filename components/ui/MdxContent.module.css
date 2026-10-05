@@ -1,0 +1,64 @@
+.prose {
+  max-width: 68ch;
+  color: var(--text-muted);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose h2 {
+  margin: 2.5rem 0 0.9rem;
+  color: var(--text);
+  font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.8rem);
+  line-height: 1.2;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p + p,
+.prose p + ul,
+.prose ul + p {
+  margin-top: 1rem;
+}
+
+.prose ul {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.prose ul li::marker {
+  color: var(--accent-bright);
+}
+
+.prose strong {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.prose a {
+  color: var(--accent-bright);
+  text-decoration: underline;
+  text-decoration-color: rgba(142, 186, 255, 0.4);
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  text-decoration-color: currentColor;
+}
+
+.sources {
+  margin-top: 2.5rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: var(--fs-small);
+}
+
+.sources h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
